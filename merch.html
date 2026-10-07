@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Main Stuff -->
+    <meta charset="UTF-8">
+    <title>♡xpfm｜merch</title>
+    <link rel="icon" type="image/x-icon" href="LOGO2.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Libre Barcode 128 Text -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+    <!-- JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <h1 class="libre-barcode-128-text-regular header">
+        <img src="LOGO2.png" alt="♡xpfm" height="100" width="256" class="logo">
+    </h1>
+
+    <p class="jetbrains-mono headerp text">digital hardcore • gabber</p>
+    <br>
+    <nav class="jetbrains-mono nav">
+        <a href="music.html" class="text">music</a>
+        ・
+        <p class="text in">merch</p>
+        ・
+        <a href="socials.html" class="text">socials</a>
+    </nav>
+    <br>
+    <a href="index.html" class="jetbrains-mono">back to home →</a>
+</header>
+
+<br><br>
+
+<div class="page">
+    <div class="sec">
+        <a href="https://drugsqueeze-shop.fourthwall.com"><img src="assets/apparel.jpg" width="64" height="64"></a>
+        <p class="jetbrains-mono">apparel</p>
+    </div>
+    <div class="sec">
+        <img src="assets/physical%20media.png" width="64" height="64">
+        <p class="jetbrains-mono na">physical media</p>
+    </div>
+</div>
+
+<br><br>
+
+<footer>
+    <p class="jetbrains-mono">© 2026 ♡xpfm. All rights reserved.</p>
+</footer>
+
+<div id="warning">
+    <div class="warning-box">
+        <h2 class="jetbrains-mono">⚠ WARNING ⚠</h2>
+        <p class="jetbrains-mono">
+            THIS WEBSITE CONTAINS<br>
+            FLICKERING LIGHTS AND<br>
+            FLASHING VISUALS.
+        </p>
+
+        <button class="jetbrains-mono" onclick="enterSite()">
+            ENTER SITE →
+        </button>
+    </div>
+</div>
+
+</body>
+
+<script>
+    const warning = document.getElementById("warning");
+    const warningTime = localStorage.getItem("warningAccepted");
+    const tenMinutes = 10 * 60 * 1000;
+
+    if (warningTime && Date.now() - Number(warningTime) < tenMinutes) {
+        warning.style.display = "none";
+    } else {
+        localStorage.removeItem("warningAccepted");
+    }
+
+    function enterSite() {
+        localStorage.setItem("warningAccepted", Date.now());
+        warning.style.display = "none";
+    }
+</script>
+
+</html>

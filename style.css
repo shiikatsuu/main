@@ -1,0 +1,167 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #AAA;
+    animation: flicker 0.3s ease-in-out infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        background: #DDD;
+    }
+
+    50% {
+        background: #090909;
+    }
+}
+
+a {
+    color: #090909;
+    text-decoration: underline;
+}
+
+.text {
+    display: inline-block;
+    background: #151515;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.text a {
+    color: #fff !important;
+}
+
+.in {
+    color: #808080 !important;
+}
+
+.libre-barcode-128-text-regular {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.jetbrains-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+
+.header {
+    font-size: 128px;
+    margin: 0;
+}
+
+p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.na {
+    text-decoration: line-through;
+}
+
+.headerp {
+    letter-spacing: 3px;
+}
+
+.logo {
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scaleY(100%);
+    }
+
+    50% {
+        transform: translateY(40px) scaleY(120%);
+    }
+}
+
+.sec {
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.sec img {
+    object-fit: cover;
+}
+
+.sec p {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+#warning {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.warning-box {
+    border: 2px solid white;
+    padding: 40px;
+    max-width: 500px;
+}
+
+.warning-box h2 {
+    margin-top: 0;
+}
+
+.warning-box p {
+    line-height: 1.6;
+}
+
+.warning-box button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.warning-box button:hover {
+    background: #ccc;
+}
+
+.daily-message {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.66);
+    border: 1px solid #000;
+}
+
+.daily-message h2 {
+    margin: 0 0 10px;
+}
+
+.daily-message p {
+    margin: 0;
+}
