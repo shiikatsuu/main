@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
   <!-- JetBrains Mono -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <script defer src="main.js"></script>
 
 </head>
 <body>
@@ -68,22 +69,5 @@
 </div>
 
 </body>
-
-<script>
-  const warning = document.getElementById("warning");
-  const warningTime = localStorage.getItem("warningAccepted");
-  const tenMinutes = 10 * 60 * 1000;
-
-  if (warningTime && Date.now() - Number(warningTime) < tenMinutes) {
-    warning.style.display = "none";
-  } else {
-    localStorage.removeItem("warningAccepted");
-  }
-
-  function enterSite() {
-    localStorage.setItem("warningAccepted", Date.now());
-    warning.style.display = "none";
-  }
-</script>
 
 </html>
