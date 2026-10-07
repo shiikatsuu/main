@@ -13,11 +13,11 @@ body {
 
 @keyframes flicker {
     0%, 100% {
-        background: #DDD;
+        background: #AAA;
     }
 
     50% {
-        background: #090909;
+        background: #505050;
     }
 }
 
@@ -149,7 +149,7 @@ p {
     background: #ccc;
 }
 
-.daily-message {
+.block {
     text-align: center;
     margin: 40px auto;
     max-width: 500px;
@@ -158,10 +158,14 @@ p {
     border: 1px solid #000;
 }
 
-.daily-message h2 {
+.block h2 {
     margin: 0 0 10px;
 }
 
-.daily-message p {
+.block p {
     margin: 0;
+}
+
+.big {
+    font-size: 38px;
 }
