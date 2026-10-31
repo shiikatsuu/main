@@ -13,6 +13,7 @@ function enterSite() {
     warning.style.display = "none";
 }
 
+// Logo click and jumpscare
 const logo = document.getElementById("logo");
 
 let clickCount = 0;
@@ -20,18 +21,15 @@ let clickCount = 0;
 logo.addEventListener("click", () => {
     clickCount++;
 
-    // Normal click sound
     const clickSound = new Audio("assets/click.mp3");
     clickSound.play();
 
-    // Jumpscare on 4th click
     if (clickCount === 4) {
         setTimeout(() => {
             const jumpscare = document.createElement("div");
 
             jumpscare.style.position = "fixed";
-            jumpscare.style.top = "0";
-            jumpscare.style.left = "0";
+            jumpscare.style.inset = "0";
             jumpscare.style.width = "100vw";
             jumpscare.style.height = "100vh";
             jumpscare.style.zIndex = "99999";
@@ -46,4 +44,16 @@ logo.addEventListener("click", () => {
             jumpSound.play();
         }, 1000);
     }
+});
+
+const booTrigger = document.getElementById("boo-trigger");
+
+booTrigger.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const booSound = new Audio("assets/boo.mp3");
+    booSound.play();
+
+    document.body.classList.add("boo");
+    document.body.innerHTML = "BOO";
 });

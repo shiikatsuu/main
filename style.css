@@ -11,6 +11,20 @@ body {
     animation: flicker 0.3s ease-in-out infinite;
 }
 
+body.boo {
+    background: #101010;
+    color: #8e8e8e;
+    font-family: "Arial Black", sans-serif;
+    font-size: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    animation: none;
+}
+
 @keyframes flicker {
     0%, 100% {
         background: #AAA;
